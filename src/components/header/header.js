@@ -1,9 +1,14 @@
-export default function header(){
+import Image from 'next/image'
+import Link from 'next/link'
+export default function header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="./index.html"
-            ><img src="https://placehold.co/60x50/02ac89/FFF" alt="logotipo"
+          <a className="navbar-brand" href={'/'}
+            ><Image src="https://placehold.co/60x50/02ac89/FFF" alt="logotipo" 
+            loader={({src}) => src}
+              height={60}
+              width={50}
           /></a>
           <button
             className="navbar-toggler"
@@ -19,18 +24,16 @@ export default function header(){
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="./view/onboarding.html">On boarding </a>
+                <Link className="nav-link" href="/onboarding">On boarding</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="./view/aboutus.html">
-                  Acerca de nosotros</a
-                >
+                <Link className="nav-link " href="/aboutus">Acerca de nosotros</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./view/noticias.html">Noticias</a>
+                <a className="nav-link" href="/noticias">Noticias</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./blog.html">Blog</a>
+                <a className="nav-link" href="/blog">Blog</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="./view/home.html">Home</a>

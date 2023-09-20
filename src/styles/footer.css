@@ -1,0 +1,30 @@
+.tableS {
+    background-color: #f4f4f4;
+     width: 100%
+}
+.tTr {
+     vertical-align: middle   
+}
+
+.tdT {
+    height: 200px;
+    width: 138px;
+}
+
+.tdT2 {
+    height: 150px;
+}
+
+.tdT3 {
+    height: 200px; 
+    text-align: center
+}
+
+.tdT4 {
+    height: 200px; 
+    text-align: center;
+}
+
+.tdT5{
+    height: 200px;
+}
