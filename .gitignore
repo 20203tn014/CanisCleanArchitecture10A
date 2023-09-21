@@ -13,7 +13,6 @@
 /.next/cache/
 /out/
 /src/.next/
-/dist/
 
 # production
 /build
