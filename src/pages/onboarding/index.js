@@ -2,80 +2,71 @@ import Script from 'next/script'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import 'bootstrap/dist/css/bootstrap.css'
-import { useEffect, useState, useRef } from 'react';
-import { useRouter } from 'next/router';
+import { useEffect } from 'react'
 
 export default function onboarding() {
-    const router = useRouter();
-    const recorridoRef = useRef(null);
-  
+  useEffect(() => {
+    // Define los pasos del recorrido
     const pasos = [
       { elemento: "acerca", mensaje: "Bienvenido a la página 'Acerca de Nosotros'. Aquí puedes obtener información sobre nuestra organización." },
       { elemento: "contacto", mensaje: "Visita la página 'Contáctanos' para obtener detalles de contacto y enviarnos un mensaje." },
       { elemento: "oferta", mensaje: "Explora nuestra 'Oferta Educativa' para conocer nuestros programas de estudio." },
       { elemento: "plan", mensaje: "Consulta el 'Plan de Estudio' para obtener información detallada sobre nuestros cursos y currículo." }
     ];
-  
-    const [indicePaso, setIndicePaso] = useState(0);
-  
-    useEffect(() => {
-      function mostrarPaso(paso) {
-        if (paso && paso.elemento) {
-          const elemento = document.querySelector(`[href="#${paso.elemento}"]`);
-          const rect = elemento.getBoundingClientRect();
-  
-          if (recorridoRef.current) {
-            recorridoRef.current.style.left = rect.left + "px";
-            recorridoRef.current.style.top = rect.bottom + "px";
-            recorridoRef.current.style.display = "block";
-          }
-        }
-      }
-  
-      function ocultarPaso() {
-        if (recorridoRef.current) {
-          recorridoRef.current.style.display = "none";
-        }
-      }
-  
-      mostrarPaso(pasos[indicePaso]);
-  
-      function handleDocumentClick() {
-        setIndicePaso((prevIndice) => prevIndice + 1);
-      }
-  
+
+    // Función para mostrar un paso del recorrido
+    function mostrarPaso(paso) {
+      const elemento = document.querySelector(`[href="#${paso.elemento}"]`);
+      const recorrido = document.getElementById("recorrido");
+
+      // Posiciona el recorrido junto al enlace
+      const rect = elemento.getBoundingClientRect();
+      recorrido.style.left = rect.left + "px";
+      recorrido.style.top = rect.bottom + "px";
+
+      // Muestra el mensaje del paso
+      recorrido.innerHTML = paso.mensaje;
+      recorrido.style.display = "block";
+    }
+
+    // Función para ocultar el recorrido
+    function ocultarPaso() {
+      const recorrido = document.getElementById("recorrido");
+      recorrido.style.display = "none";
+    }
+
+    // Iniciar el recorrido con el primer paso
+    let indicePaso = 0;
+    mostrarPaso(pasos[indicePaso]);
+
+    // Manejar clic en cualquier parte de la página para avanzar al siguiente paso
+    function handleDocumentClick() {
+      indicePaso++;
       if (indicePaso < pasos.length) {
-        document.addEventListener("click", handleDocumentClick);
+        mostrarPaso(pasos[indicePaso]);
       } else {
+        // Cuando se completan todos los pasos, oculta el recorrido
         ocultarPaso();
       }
-  
-      return () => {
-        document.removeEventListener("click", handleDocumentClick);
-      };
-    }, [indicePaso]);
-  
-    useEffect(() => {
-      const handleRouteChange = () => {
-        setIndicePaso(0);
-      };
-  
-      router.events.on('routeChangeStart', handleRouteChange);
-  
-      return () => {
-        router.events.off('routeChangeStart', handleRouteChange);
-      };
-    }, [router]);
+    }
+
+    // Add event listener when the component mounts
+    document.addEventListener("click", handleDocumentClick);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
+
 
     return (
         <main>
             <Header/>
-            
              <div className="container py-5 mt-5">
         <div className="card">
           <card className="card-body">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <a className="navbar-brand" href="#">Tu Sitio</a>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
               </button>
@@ -99,11 +90,8 @@ export default function onboarding() {
           </card>
         </div>
       </div>
-        <div id="recorrido" ref={recorridoRef}></div>\
+        <div id="recorrido" ></div>
         <Footer></Footer>
-        <script type='text/jsx'>
-        
-        </script>
         </main>
     )
 }
