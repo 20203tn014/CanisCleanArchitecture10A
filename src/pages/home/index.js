@@ -4,66 +4,6 @@ import Footer from '../../components/footer/footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import { useEffect, useState} from 'react'
 export default function home() {
-    function TsuSection() {
-        return (
-          <div className="card-body text-success">
-            {/* Content for TSU section */}
-          </div>
-        );
-      }
-      
-      function IngSection() {
-        return (
-          <div className="card-body text-info">
-            {/* Content for Ingeniería section */}
-          </div>
-        );
-      }
-      
-      function LicSection() {
-        return (
-          <div className="card-body text-danger">
-            {/* Content for Ingeniería section */}
-          </div>
-        );
-      }
-
-      const [selectedSection, setSelectedSection] = useState(null);
-
-      useEffect(() => {
-        // Add event listeners for each button click
-        const tsuButton = document.getElementById("tsu");
-        const ingButton = document.getElementById("ing");
-        const licButton = document.getElementById("lic");
-    
-        tsuButton.addEventListener("click", () => {
-          setSelectedSection('tsu');
-        });
-    
-        ingButton.addEventListener("click", () => {
-          setSelectedSection('ing');
-        });
-    
-        licButton.addEventListener("click", () => {
-          setSelectedSection('lic');
-        });
-    
-        // Clean up event listeners when the component unmounts
-        return () => {
-          tsuButton.removeEventListener("click", () => {
-            setSelectedSection('tsu');
-          });
-    
-          ingButton.removeEventListener("click", () => {
-            setSelectedSection('ing');
-          });
-    
-          licButton.removeEventListener("click", () => {
-            setSelectedSection('lic');
-          });
-        };
-      }, []);
-
     return (
         <main>
             <Header />
