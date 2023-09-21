@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 export default function header() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand" href={'/'}
             ><Image src="https://placehold.co/60x50/02ac89/FFF" alt="logotipo" 
@@ -30,19 +30,19 @@ export default function header() {
                 <Link className="nav-link " href="/aboutus">Acerca de nosotros</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/noticias">Noticias</a>
+              <Link className="nav-link " href="/noticias">Noticias</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/blog">Blog</a>
+                <Link className="nav-link " href="/blog">Blog</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./view/home.html">Home</a>
+              <Link className="nav-link " href="/home">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./view/comments.html">Comentarios </a>
+              <Link className="nav-link " href="/comentarios">Comentarios</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./view/contactanos.html">Contáctanos </a>
+              <Link className="nav-link " href="/contactanos">Contáctanos</Link>
               </li>
             </ul>
           </div>
