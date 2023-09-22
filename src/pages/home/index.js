@@ -1,9 +1,27 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Image from 'next/image'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import 'bootstrap/dist/css/bootstrap.css'
-import { useEffect, useState} from 'react'
+import React, { useState } from 'react';
+
 export default function home() {
+    const [tsuVisible, setTsuVisible] = useState(false);
+    const [ingVisible, setIngVisible] = useState(false);
+    const [licVisible, setLicVisible] = useState(false);
+
+    const toggleTsu = () => {
+        setTsuVisible(!tsuVisible);
+    };
+
+    const toggleIng = () => {
+        setIngVisible(!ingVisible);
+    };
+
+    const toggleLic = () => {
+        setLicVisible(!licVisible);
+    };
+
     return (
         <main>
             <Header />
@@ -11,25 +29,37 @@ export default function home() {
                 <h1 className="ms-5">Plan de Estudios</h1>
 
                 <div className="row container" >
-                    <div className="col-12 col-md-4">
-                        <button id="tsu" className="btn btn-outline-success"><i className="fa-solid fa-school"></i>  TSU</button>
-
-                        <div id="tsuContainer" className="card border-success mb-3 col-12 col-md-4 mt-3" style={{ minWidth: '100vh'}}>
-                        </div>
+                <div className="col-12 col-md-4">
+                        <button id="tsu" className="btn btn-outline-success" onClick={toggleTsu}>
+                            <i className="fa-solid fa-school"></i>  TSU
+                        </button>
+                        {tsuVisible && (
+                            <div className="card border-success mb-3 col-12 col-md-4 mt-3" style={{ minWidth: '100vh' }}>
+                                {/* Contenido de TSU */}
+                            </div>
+                        )}
                     </div>
 
                     <div className="col-12 col-md-4">
-                        <button id="ing" className="btn btn-outline-info"><i className="fa-solid fa-school"></i>  Ingenieria</button>
-                        <div id="ingContainer" className="card border-info mb-3 col-12 col-md-4 mt-3" style={{ minWidth: '100vh'}}>
-
-                        </div>
+                        <button id="ing" className="btn btn-outline-info" onClick={toggleIng}>
+                            <i className="fa-solid fa-school"></i>  Ingeniería
+                        </button>
+                        {ingVisible && (
+                            <div className="card border-info mb-3 col-12 col-md-4 mt-3" style={{ minWidth: '100vh' }}>
+                                {/* Contenido de Ingeniería */}
+                            </div>
+                        )}
                     </div>
 
                     <div className="col-12 col-md-4">
-                        <button id="lic" className="btn btn-outline-danger"><i className="fa-solid fa-school"></i>  Licenciatura</button>
-                        <div id="licContainer" className="card border-danger mb-3 col-12 col-md-4 mt-3" style={{ minWidth: '100vh' }}>
-                        </div>
-
+                        <button id="lic" className="btn btn-outline-danger" onClick={toggleLic}>
+                            <i className="fa-solid fa-school"></i>  Licenciatura
+                        </button>
+                        {licVisible && (
+                            <div className="card border-danger mb-3 col-12 col-md-4 mt-3" style={{ minWidth: '100vh' }}>
+                                {/* Contenido de Licenciatura */}
+                            </div>
+                        )}
                     </div>
                     <div className="row">
                         <div className="col-12">

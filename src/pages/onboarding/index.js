@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Script from 'next/script'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
