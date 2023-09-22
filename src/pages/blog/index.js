@@ -26,7 +26,7 @@ export default function blog(){
                     <img src="https://www.elfinanciero.com.mx/resizer/QULmxPFCYUlNsKhf430sMskESFk=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/6V6GZZROIZACFNIKTZ7I4REPFM.jpg" className="card-img-top" alt="..."/>
                     <div className="card-body">
                       <h5 className="card-title">Noticia 2</h5>
-                      <p className="card-text">Some quick example text to build on the Noticia  and make up the bulk of the card's content.</p>
+                      <p className="card-text">Some quick example text to build on the Noticia  and make up the bulk of the card&apos;s content.</p>
                       <a href="#" className="btn btn-primary">Ver más</a>
                     </div>
                   </div>
@@ -41,7 +41,7 @@ export default function blog(){
                     </div>
                   </div>
             </div>
-            
+
         </div>
         <div className="row" style={{marginTop: '30px'}}>
             <div className="col-4">
@@ -69,7 +69,7 @@ export default function blog(){
                     <img src="https://i0.wp.com/tucochinito.com/wp-content/uploads/2021/02/simbolo-dolar-origen-mexicano.jpg?fit=1024%2C576&ssl=1" className="card-img-top" alt="..."/>
                     <div className="card-body">
                       <h5 className="card-title">Noticia 6</h5>
-                      <p className="card-text">El símbolo del dólar hoy en día se representa así ‘$’ y es una representación gráfica que se usa</p>
+                      <p className="card-text">El símbolo del dólar hoy en día se representa así $ y es una representación gráfica que se usa</p>
                       <a href="#" className="btn btn-primary">Ver más</a>
                     </div>
                   </div>
