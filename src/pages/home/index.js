@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
 import 'bootstrap/dist/css/bootstrap.css'
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function home() {
     const [tsuVisible, setTsuVisible] = useState(false);
