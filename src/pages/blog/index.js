@@ -36,7 +36,7 @@ export default function blog(){
                     <img src="https://aristeguinoticias.com/_next/image/?url=https%3A%2F%2Feditorial.aristeguinoticias.com%2Fwp-content%2Fuploads%2F2023%2F09%2Fsismo-collima-jalisco-08092023.jpg&w=1200&q=75" className="card-img-top" alt="..."/>
                     <div className="card-body">
                       <h5 className="card-title">Noticia 3</h5>
-                      <p className="card-text">Some quick example text to build on the Noticia  and make up the bulk of the card's content.</p>
+                      <p className="card-text">Some quick example text to build on the Noticia  and make up the bulk of the card&apos;s content.</p>
                       <a href="#" className="btn btn-primary">Ver más</a>
                     </div>
                   </div>
@@ -49,7 +49,7 @@ export default function blog(){
                     <img src="https://images.milenio.com/LCDT8eJryK68pdjXdMckDx9TSbg=/942x532/uploads/media/2023/09/08/abogado-uriel-carmona-traslado-penal_70_0_1140_720.jpeg" className="card-img-top" alt="..."/>
                     <div className="card-body">
                       <h5 className="card-title">Noticia 4</h5>
-                      <p className="card-text">Some quick example text to build on the Noticia  and make up the bulk of the card's content.</p>
+                      <p className="card-text">Some quick example text to build on the Noticia  and make up the bulk of the card&apos;s content.</p>
                       <a href="#" className="btn btn-primary">Ver más</a>
                     </div>
                   </div>

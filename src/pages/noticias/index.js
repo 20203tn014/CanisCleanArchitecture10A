@@ -84,13 +84,19 @@ export default function noticias() {
                         </div>
                         <div className="carousel-inner">
                             <div className="carousel-item active">
-                                <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1486&q=80" alt="" className="d-block w-100 h-50" />
+                                <Image src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1486&q=80" 
+                                alt="" className="d-block w-100 h-50" 
+                                width={200} height={100}/>
                             </div>
                             <div className="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="" className="d-block w-100" />
+                                <Image src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                alt="" className="d-block w-100" 
+                                width={200} height={100}/>
                             </div>
                             <div className="carousel-item">
-                                <img src="https://plus.unsplash.com/premium_photo-1682284353470-53c3a913bded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="" className="d-block w-100" />
+                                <Image src="https://plus.unsplash.com/premium_photo-1682284353470-53c3a913bded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                alt="" className="d-block w-100" 
+                                width={200} height={100}/>
                             </div>
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
