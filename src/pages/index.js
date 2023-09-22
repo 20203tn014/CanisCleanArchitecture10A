@@ -2,7 +2,7 @@ import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import Image from 'next/image'
 // add bootstrap css 
-import &#39bootstrap/dist/css/bootstrap.css&#39
+import 'bootstrap/dist/css/bootstrap.css'
 export default function index() {
   return (
     <main >

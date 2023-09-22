@@ -21,7 +21,7 @@ export default function noticias() {
                                 de Ingeniería. También les presentamos el nuevo programa de intercambio estudiantil
                                 con la Universidad de Oxford, que ofrece la oportunidad de cursar un semestre en una
                                 de las instituciones más prestigiosas del mundo. Además, les invitamos a participar
-                                en el concurso de fotografía "Mi universidad, mi hogar", que premiará las mejores
+                                en el concurso de fotografía &quotMi universidad, mi hogar&quot, que premiará las mejores
                                 imágenes que reflejen el orgullo y el sentido de pertenencia de los universitarios.
                                 Y por último, les recordamos que ya están abiertas las inscripciones para los cursos
                                 libres del segundo semestre, que incluyen temas como yoga, ajedrez, teatro y fotografía
