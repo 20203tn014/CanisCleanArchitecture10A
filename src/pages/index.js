@@ -2,7 +2,7 @@ import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import Image from 'next/image'
 // add bootstrap css 
-import 'bootstrap/dist/css/bootstrap.css'
+import &#39bootstrap/dist/css/bootstrap.css&#39
 export default function index() {
   return (
     <main >
@@ -27,7 +27,7 @@ export default function index() {
                 <div className="col-12">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    up the bulk of the card&#39s content.
                   </p>
                 </div>
                 <div className="col-12 text-center my-3">
@@ -57,7 +57,7 @@ export default function index() {
                 <div className="col-12">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    up the bulk of the card&#39s content.
                   </p>
                 </div>
                 <div className="col-12 text-center my-3">
@@ -87,7 +87,7 @@ export default function index() {
                 <div className="col-12">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    up the bulk of the card&#39s content.
                   </p>
                 </div>
                 <div className="col-12 text-center my-3">
